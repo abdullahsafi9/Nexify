@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ThreeDCardExample } from "./snippets/3d-card-snippet";
 import { EvervaultCardSnippet } from "./snippets/evervault-card-snippet";
+import Link from "next/link";
 
 const GraphicDesign = () => {
     return ( <div>
@@ -33,7 +34,12 @@ const GraphicDesign = () => {
             </motion.div>
 
       </div>
-
+ <Link
+          href={"/book"}
+          className="cursor-pointer mt-[-20px] flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+        >
+          Learn More
+        </Link>
         </div>
     </div>  );
 }
