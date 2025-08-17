@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image"
+import Link from "next/link";
 
 const WebsiteDesign = () => {
     return (   
@@ -108,6 +109,12 @@ const WebsiteDesign = () => {
         </div>
     </div>
     </div>
+     <Link
+          href={"/book"}
+          className="cursor-pointer  flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+        >
+          Learn More
+        </Link>
     </div> );
 }
  
