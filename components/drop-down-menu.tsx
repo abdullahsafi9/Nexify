@@ -11,7 +11,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }
     <motion.div
       className="
     w-screen
-    h-screen
+
     bg-gradient-to-b 
     from-neutral-50
      to-neutral-400 
