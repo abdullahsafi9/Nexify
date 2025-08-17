@@ -23,6 +23,7 @@ import { PiCheckBold } from "react-icons/pi";
 import FAQS from "./faq";
 import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -280,6 +281,8 @@ export default function Home() {
 
               
         <FAQS />
+
+        <Footer/>
       </div>
     </div>
   );

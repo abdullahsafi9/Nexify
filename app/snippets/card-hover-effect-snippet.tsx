@@ -3,14 +3,14 @@ import { PiAppStoreLogo, PiHeadsetFill, PiLock, PiMegaphone, PiMonitor, PiStoref
 
 export function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-5xl mx-auto px-8 text-justify">
       <HoverEffect items={projects} />
     </div>
   );
 }
 export const projects = [
     {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiMonitor className="w-8 h-8 text-blue-600" /></div>,
+        icon : <div className="bg-blue-100 p-4 rounded-full text-justify"><PiMonitor className="w-8 h-8 text-blue-600" /></div>,
         title: "Website Design",
         description:
           "We build fully responsive websites that look great on all devices. Our websites are designed to convert visitors into customers.",

@@ -9,7 +9,7 @@ import {
 
 const FAQS = () => {
     return ( 
-        <div className=" mt-10 md:py-10 bg-[#f6f5f4] w-full
+        <div className=" mt-10 md:py-10 mt-[-40px] bg-[#f6f5f4] w-full
         rounded-3xl
         
         ">
@@ -17,14 +17,14 @@ const FAQS = () => {
             <div className="text-3xl md:text-7xl font-bold text-black">
               Have questions ?
             </div>
-            <div className="  font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-emerald-600 to-blue-300 bg-clip-text text-transparent">
+            <div className=" font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-emerald-600 to-blue-300 bg-clip-text text-transparent">
               Get answers.
             </div>
             <Accordion type="single" collapsible>
     <AccordionItem value="item-1">
-      <AccordionTrigger>What is Bird?</AccordionTrigger>
+      <AccordionTrigger>What is Nexify?</AccordionTrigger>
       <AccordionContent>
-        Bird is a full fledge marketing agency that specializes in branding, web design, and digital marketing.
+        Nexify is a full fledge marketing agency that specializes in branding, web design, and digital marketing.
       </AccordionContent>
     </AccordionItem>
     <AccordionItem value="item-2">
@@ -48,7 +48,7 @@ const FAQS = () => {
     Support ?
         </AccordionTrigger>
       <AccordionContent>
-        We offer Monday-Friday support for all our clients.
+        We offer weekly 7 days support for all our clients.
       </AccordionContent>
     </AccordionItem>
   </Accordion>

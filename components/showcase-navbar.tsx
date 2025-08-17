@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
 
+
 interface NavbarProps {
   scrollToWebsiteDesign: () => void;
   scrollToGraphicDesign: () => void;
@@ -32,13 +33,12 @@ const Navbar = ({
     setIsDropDownVisible(false);
   };
 
+const ShowcaseNavbar = () => {
   return (
     <div>
       <div className="p-6 md:p-10 xl:w-4/5 2xl:w-[68%] rounded-[6px] h-[10px] mt-[15px] bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50 md:mx-auto 
-      transform flex sticky items-center justify-between z-50
-      cursor-pointer  
-            ">
+      transform flex sticky items-center justify-between z-50">
         <div>
           <Link className=" bg-white cursor-pointer" href="/">
             <Image
@@ -59,17 +59,17 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
-          <Link onClick={scrollToWebsiteDesign} className="hover:text-gray-50" href="/">
+          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
             Website Design
-          </Link>
-          <Link onClick={scrollToGraphicDesign} className="hover:text-gray-50"  href="/">
+          </div>
+          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
             Graphic Design
-          </Link>
+          </div>
 
          
-          <Link onClick={scrollToBrands} className="hover:text-gray-50"  href="/">
+          <div onClick={scrollToBrands} className="hover:text-gray-50">
             Brands
-          </Link>
+          </div>
 
           <Link href="/pricing" className="hover:text-gray-50">
             Pricing
@@ -117,4 +117,4 @@ const Navbar = ({
   );
 };
 
-export default Navbar;
+export default ShowcaseNavbar;
