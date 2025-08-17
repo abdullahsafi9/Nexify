@@ -1,8 +1,8 @@
 "use client";
 
-
+import { useState, useRef } from "react";
 import Calendly from "./calendly";
-
+import Navbar from "@/components/navbar";
 import { PiCheckCircle } from "react-icons/pi";
 import { motion } from "framer-motion";
 
@@ -11,8 +11,48 @@ const checkItemVariants = {
   visible: { opacity: 1, x: 0 },
 };
 
-const Meeting = () => {
 
+
+const Meeting = () => {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+
+   const websiteDesignRef = useRef<HTMLDivElement>(null);
+  const graphicDesignRef = useRef<HTMLDivElement>(null);
+  const shopifyStoresRef = useRef<HTMLDivElement>(null);
+  const brandsRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+
+  const scrollToWebsiteDesign = () => {
+    websiteDesignRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+
+  const scrollToGraphicDesign = () => {
+    graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToShopifyStores = () => {
+    shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToBrands = () => {
+    brandsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  
+  // Function to scroll to Services section
+  const scrollToServices = () => {
+    servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
 
   return (
@@ -21,13 +61,19 @@ const Meeting = () => {
     flex flex-col  w-full  
 
      overflow-clip inset-0 -z-10 
-  bg-[#fafafa]  bg-[size:14px_24px]
+  bg-black bg-[size:14px_24px] 
     
     ">
-  
+      <Navbar 
+      scrollToWebsiteDesign={scrollToWebsiteDesign}
+        scrollToGraphicDesign={scrollToGraphicDesign}
+        scrollToShopifyStores={scrollToShopifyStores}
+        scrollToBrands={scrollToBrands}
+        scrollToServices={scrollToServices}
+        />
       <div className="md:px-0 px-6 xl:w-4/5 2xl:w-[68%] justify-between md:mt-14 md:flex mx-auto  ">
         <div className="md:w-2/5">
-          <h1 className="text-4xl font-semibold pt-10   ">Let&apos;s Meet</h1>
+          <h1 className="text-4xl text-white font-semibold pt-10   ">Let&apos;s Meet</h1>
           <p className="text-lg text-gray-500 py-4">
             We are always excited to meet new people and discuss new projects.
             Please feel free to book a meeting with us.
@@ -61,10 +107,10 @@ const Meeting = () => {
                 >
                   <PiCheckCircle className=" rounded-md text-[#3d80d7] text-2xl flex-shrink-0" />
                   <ul>
-                    <h3 className="text-lg font-bold text-gray-700">
+                    <h3 className="text-lg font-bold text-gray-400">
                       {item.title}
                     </h3>
-                    <div className="text-gray-400">{item.description}</div>
+                    <div className="text-gray-600">{item.description}</div>
                   </ul>
                 </motion.div>
               ))}
