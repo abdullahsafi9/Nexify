@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import Link from "next/link";
 import { Lora } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -59,6 +59,12 @@ const Brands = () => {
           ))}
         </div>
 
+ <Link
+          href={"/book"}
+          className="cursor-pointer mt-[-20px] flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+        >
+          Learn More
+        </Link>
         <div
           className={cn(
             "flex items-center justify-center text-xl xl:text-2xl pt-10 md:pt-0 pb-4  px-8  text-center text-white  ",
