@@ -36,7 +36,7 @@ const GraphicDesign = () => {
       </div>
  <Link
           href={"/book"}
-          className="cursor-pointer mt-[-20px] flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+          className="cursor-pointer md:mt-[-20px] flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
         >
           Learn More
         </Link>
