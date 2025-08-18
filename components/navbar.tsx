@@ -10,7 +10,7 @@ import DropDownMenu from "./drop-down-menu";
 interface NavbarProps {
   scrollToWebsiteDesign: () => void;
   scrollToGraphicDesign: () => void;
-  scrollToShopifyStores: () => void;
+  scrollToWebsites: () => void;
   scrollToBrands: () => void;
   scrollToServices: () => void; // Define scrollToServices function
 }
@@ -18,7 +18,7 @@ interface NavbarProps {
 const Navbar = ({
   scrollToWebsiteDesign,
   scrollToGraphicDesign,
-  scrollToShopifyStores,
+  scrollToWebsites,
   scrollToBrands,
   scrollToServices, // Add scrollToServices to props
 }: NavbarProps) => {
@@ -59,6 +59,9 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
+          <Link onClick={scrollToWebsites} className="hover:text-gray-50" href="/">
+            Websites
+          </Link>
           <Link onClick={scrollToWebsiteDesign} className="hover:text-gray-50" href="/">
             Website Design
           </Link>

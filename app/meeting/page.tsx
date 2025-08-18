@@ -15,44 +15,44 @@ const checkItemVariants = {
 
 const Meeting = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
-  };
-  const closeDropdown = () => {
-    setDropdownVisible(false);
-  };
-
-   const websiteDesignRef = useRef<HTMLDivElement>(null);
-  const graphicDesignRef = useRef<HTMLDivElement>(null);
-  const shopifyStoresRef = useRef<HTMLDivElement>(null);
-  const brandsRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
-
-  const scrollToWebsiteDesign = () => {
-    websiteDesignRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-  };
-
-  const scrollToGraphicDesign = () => {
-    graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToShopifyStores = () => {
-    shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToBrands = () => {
-    brandsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  
-  // Function to scroll to Services section
-  const scrollToServices = () => {
-    servicesRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+            const toggleDropdown = () => {
+              setDropdownVisible(!isDropdownVisible);
+            };
+            const closeDropdown = () => {
+              setDropdownVisible(false);
+            };
+          
+             const websiteDesignRef = useRef<HTMLDivElement>(null);
+            const graphicDesignRef = useRef<HTMLDivElement>(null);
+            const websitesRef = useRef<HTMLDivElement>(null);
+            const brandsRef = useRef<HTMLDivElement>(null);
+            const servicesRef = useRef<HTMLDivElement>(null);
+          
+            const scrollToWebsiteDesign = () => {
+              websiteDesignRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest",
+              });
+            };
+          
+            const scrollToGraphicDesign = () => {
+              graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
+          
+            const scrollToWebsites = () => {
+              websitesRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
+          
+            const scrollToBrands = () => {
+              brandsRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
+          
+            
+            // Function to scroll to Services section
+            const scrollToServices = () => {
+              servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
 
 
   return (
@@ -67,7 +67,7 @@ const Meeting = () => {
       <Navbar 
       scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
-        scrollToShopifyStores={scrollToShopifyStores}
+        scrollToWebsites={scrollToWebsites}
         scrollToBrands={scrollToBrands}
         scrollToServices={scrollToServices}
         />

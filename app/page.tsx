@@ -15,7 +15,7 @@ import BoxReveal from "@/components/magicui/box-reveal";
 import { AnimatedShinyTextDemo } from "@/components/demos/animated-shiny-text-demo";
 import WebsiteDesign from "./website-design";
 import GraphicDesign from "./graphic-design";
-import ShopifyStores from "./shopify-stores";
+import Websites from "./websites";
 import Brands from "./brands";
 import { WordPullUpDemo } from "@/components/demos/word-pull-up-demo";
 import Services from "./services";
@@ -24,6 +24,7 @@ import FAQS from "./faq";
 import { InfiniteMovingLogos } from "@/components/ui/infinite-moving-logos";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import Footer from "@/components/footer";
+
 
 export default function Home() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -36,7 +37,7 @@ export default function Home() {
 
   const websiteDesignRef = useRef<HTMLDivElement>(null);
   const graphicDesignRef = useRef<HTMLDivElement>(null);
-  const shopifyStoresRef = useRef<HTMLDivElement>(null);
+  const websitesRef = useRef<HTMLDivElement>(null);
   const brandsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
 
@@ -52,8 +53,8 @@ export default function Home() {
     graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToShopifyStores = () => {
-    shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToWebsites = () => {
+    websitesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToBrands = () => {
@@ -65,51 +66,13 @@ export default function Home() {
     servicesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const services = [
-  {
-    icon: "/images/s_6.png",
-    title: "Web Design + Development",
-    description:
-      "Take your business to the next level with our web design and development services",
-  },
-  {
-    icon: "/images/s_1.png",
-    title: "Search Engine Optimization",
-    description:
-      "Get your website to the top of search engine results with our SEO services",
-  },
-  {
-    icon: "/images/s_5.png",
-    title: "Content Creation",
-    description:
-      "Boost your brand's online presence with our social media marketing services",
-  },
-  {
-    icon: "/images/s_3.png",
-    title: "Social Media Marketing",
-    description:
-      "Interact with your customers and increase sales with our email marketing services",
-  },
-  {
-    icon: "/images/s_4.png",
-    title: "Email Marketing",
-    description:
-      "With our content creation services, we help businesses drive results",
-  },
-  {
-    icon: "/images/s_2.png",
-    title: "Pay-Per-Click Advertising",
-    description:
-      "Don't waste money on ineffective advertising. Our PPC services help you reach your target audience",
-  },
-];
 
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Navbar
         scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
-        scrollToShopifyStores={scrollToShopifyStores}
+        scrollToWebsites={scrollToWebsites}
         scrollToBrands={scrollToBrands}
         scrollToServices={scrollToServices}
       />
@@ -264,6 +227,9 @@ export default function Home() {
 
         </main>  
 
+<div ref={websitesRef}>
+          <Websites />
+        </div>
         <div ref={websiteDesignRef}>
           <WebsiteDesign />
         </div>

@@ -6,45 +6,45 @@ import { EvervaultCardSnippet } from "../snippets/evervault-card-snippet";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 const GraphicDesign = () => {
-    const [isDropdownVisible, setDropdownVisible] = useState(false);
-        const toggleDropdown = () => {
-          setDropdownVisible(!isDropdownVisible);
-        };
-        const closeDropdown = () => {
-          setDropdownVisible(false);
-        };
-      
-         const websiteDesignRef = useRef<HTMLDivElement>(null);
-        const graphicDesignRef = useRef<HTMLDivElement>(null);
-        const shopifyStoresRef = useRef<HTMLDivElement>(null);
-        const brandsRef = useRef<HTMLDivElement>(null);
-        const servicesRef = useRef<HTMLDivElement>(null);
-      
-        const scrollToWebsiteDesign = () => {
-          websiteDesignRef.current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest",
-          });
-        };
-      
-        const scrollToGraphicDesign = () => {
-          graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
-        };
-      
-        const scrollToShopifyStores = () => {
-          shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
-        };
-      
-        const scrollToBrands = () => {
-          brandsRef.current?.scrollIntoView({ behavior: "smooth" });
-        };
-      
-        
-        // Function to scroll to Services section
-        const scrollToServices = () => {
-          servicesRef.current?.scrollIntoView({ behavior: "smooth" });
-        };
+     const [isDropdownVisible, setDropdownVisible] = useState(false);
+            const toggleDropdown = () => {
+              setDropdownVisible(!isDropdownVisible);
+            };
+            const closeDropdown = () => {
+              setDropdownVisible(false);
+            };
+          
+             const websiteDesignRef = useRef<HTMLDivElement>(null);
+            const graphicDesignRef = useRef<HTMLDivElement>(null);
+            const websitesRef = useRef<HTMLDivElement>(null);
+            const brandsRef = useRef<HTMLDivElement>(null);
+            const servicesRef = useRef<HTMLDivElement>(null);
+          
+            const scrollToWebsiteDesign = () => {
+              websiteDesignRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+                inline: "nearest",
+              });
+            };
+          
+            const scrollToGraphicDesign = () => {
+              graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
+          
+            const scrollToWebsites = () => {
+              websitesRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
+          
+            const scrollToBrands = () => {
+              brandsRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
+          
+            
+            // Function to scroll to Services section
+            const scrollToServices = () => {
+              servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+            };
     return ( <div className=" flex flex-col  w-full  
 
      overflow-clip inset-0 -z-10 
@@ -52,7 +52,7 @@ const GraphicDesign = () => {
     <Navbar
        scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
-        scrollToShopifyStores={scrollToShopifyStores}
+        scrollToWebsites={scrollToWebsites}
         scrollToBrands={scrollToBrands}
         scrollToServices={scrollToServices}
         />
