@@ -125,7 +125,7 @@ export default function ContactForm() {
       <Navbar
         scrollToWebsiteDesign={() => {}}
         scrollToGraphicDesign={() => {}}
-        scrollToShopifyStores={() => {}}
+        scrollToWebsites={() => {}}
         scrollToBrands={() => {}}
         scrollToServices={() => {}}
       />
