@@ -11,7 +11,7 @@ const Book = () => {
         <Navbar
           scrollToWebsiteDesign={() => {}}
           scrollToGraphicDesign={() => {}}
-          scrollToShopifyStores={() => {}}
+          scrollToWebsites={() => {}}
           scrollToBrands={() => {}}
           scrollToServices={() => {}}
         />
