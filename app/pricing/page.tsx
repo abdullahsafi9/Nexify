@@ -77,7 +77,7 @@ const Pricing = () => {
 <Navbar
              scrollToWebsiteDesign={() => {}}
              scrollToGraphicDesign={() => {}}
-             scrollToShopifyStores={() => {}}
+             scrollToWebsites={() => {}}
              scrollToBrands={() => {}}
               scrollToServices={() => {}}
       />
