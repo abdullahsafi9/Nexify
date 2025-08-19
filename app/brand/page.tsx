@@ -53,7 +53,7 @@ const Brands = () => {
   
      const websiteDesignRef = useRef<HTMLDivElement>(null);
     const graphicDesignRef = useRef<HTMLDivElement>(null);
-    const shopifyStoresRef = useRef<HTMLDivElement>(null);
+    const websitesRef = useRef<HTMLDivElement>(null);
     const brandsRef = useRef<HTMLDivElement>(null);
     const servicesRef = useRef<HTMLDivElement>(null);
   
@@ -69,8 +69,8 @@ const Brands = () => {
       graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
     };
   
-    const scrollToShopifyStores = () => {
-      shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
+    const scrollToWebsites = () => {
+      websitesRef.current?.scrollIntoView({ behavior: "smooth" });
     };
   
     const scrollToBrands = () => {
@@ -95,7 +95,7 @@ const Brands = () => {
       <Navbar
        scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
-        scrollToShopifyStores={scrollToShopifyStores}
+        scrollToWebsites={scrollToWebsites}
         scrollToBrands={scrollToBrands}
         scrollToServices={scrollToServices}
         />
